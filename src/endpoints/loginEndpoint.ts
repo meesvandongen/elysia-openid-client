@@ -50,7 +50,7 @@ export function loginEndpoint(this: OidcClient) {
         set.redirect = authorizationUrl;
         return;
       } catch (e: unknown) {
-        logger?.warn("endpoints/revoke: Throw exception");
+        logger?.warn("endpoints/login: Throw exception");
         logger?.debug(e);
         return handleErrorResponse(e, null, this, cookie);
       }
